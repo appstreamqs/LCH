@@ -1,0 +1,36 @@
+{
+  "SessionStart": {
+    "executables": [
+      {
+        "context": "system",
+        "filename": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "arguments": "file C:\\AppStream\\SessionScripts\\_systemStart.ps1 ",
+        "s3LogEnabled": true
+      },
+      {
+        "context": "user",
+        "filename": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "arguments": "file C:\\AppStream\\SessionScripts\\_userStart.ps1",
+        "s3LogEnabled": true
+      }
+    ],
+    "waitingTime": 10
+  },
+  "SessionTermination": {
+    "executables": [
+      {
+        "context": "system",
+        "filename": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "arguments": "file C:\\AppStream\\SessionScripts\\_systemEnd.ps1",
+        "s3LogEnabled": true
+      },
+      {
+        "context": "user",
+        "filename": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "arguments": "file C:\\AppStream\\SessionScripts\\_userEnd.ps1",
+        "s3LogEnabled": true
+      }
+    ],
+    "waitingTime": 10
+  }
+}
